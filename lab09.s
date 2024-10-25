@@ -18,8 +18,12 @@ pushq %rbp
 movq %rsp, %rbp
 
 # === main() code here ===
-
-
+# set up a = 1
+movq $1, %rax       # a = 1 in %rax 
+# set up b = 2
+movq $2, %rbx       # b = 2 in %rbx
+# c = a + b
+addq %rbx, %rax     # c = a + b in %rax
 
 # clean up and return
 movq $0, %rax       # place return value in rax
